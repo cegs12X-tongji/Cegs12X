@@ -1,2 +1,2 @@
-# CegsLL6
-Template for low-level 6 GR x 6 IP Cegs
+# Cegs12X
+Template for 12 GR x 12 IP Cegs
