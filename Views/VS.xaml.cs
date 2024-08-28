@@ -1,15 +1,14 @@
 ﻿using AeonHacs.Wpf.Views;
 
-namespace Cegs12X.Views
+namespace Cegs12X.Views;
+
+/// <summary>
+/// Interaction logic for VS.xaml
+/// </summary>
+public partial class VS : View
 {
-    /// <summary>
-    /// Interaction logic for VS.xaml
-    /// </summary>
-    public partial class VS : View
+    public VS()
     {
-        public VS()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }
