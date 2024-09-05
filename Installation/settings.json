@@ -1,4 +1,5 @@
 {
+  "$type": "AeonHacs.Components.Cegs12X, Cegs12X",
   "Name": "Cegs12X",
   "AlertManager": {
     "Name": "AlertManager",
@@ -54,7 +55,6 @@
           "Temperature": 500,
           "Minutes": 15,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": false,
           "Name": "Pre-Burn",
           "Description": ""
@@ -68,7 +68,6 @@
           "Temperature": 850,
           "Minutes": 50,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": true,
           "Name": "Combust",
           "Description": ""
@@ -113,7 +112,6 @@
           "Temperature": 150,
           "Minutes": 15,
           "AdmitO2": false,
-          "OpenLine": false,
           "WaitForSetpoint": true,
           "Name": "Combust",
           "Description": ""
@@ -162,7 +160,6 @@
           "Temperature": 150,
           "Minutes": 15,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": false,
           "Name": "Pre-Burn",
           "Description": ""
@@ -176,7 +173,6 @@
           "Temperature": 625,
           "Minutes": 45,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": true,
           "Name": "Combust",
           "Description": ""
@@ -231,7 +227,6 @@
           "Temperature": 425,
           "Minutes": 30,
           "AdmitO2": false,
-          "OpenLine": false,
           "WaitForSetpoint": true,
           "Name": "Combust",
           "Description": ""
@@ -331,7 +326,6 @@
           "Temperature": 500,
           "Minutes": 15,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": false,
           "Name": "Pre-Burn",
           "Description": ""
@@ -382,7 +376,6 @@
           "Temperature": 150,
           "Minutes": 15,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": false,
           "Name": "Pre-Burn",
           "Description": ""
@@ -396,7 +389,6 @@
           "Temperature": 625,
           "Minutes": 45,
           "AdmitO2": true,
-          "OpenLine": true,
           "WaitForSetpoint": true,
           "Name": "Combust",
           "Description": ""
@@ -461,15 +453,15 @@
       "IdleTimeout": 50,
       "LogEverything": false,
       "Devices": {
-        "do0": "pVM1_IG.Enable",
+        "do0": "pVM_IG.Enable",
         "do1": "fan3",
         "do2": "fan1",
         "do3": "fan2",
         "do4": "fan4",
         "ai0": "pMC",
         "ai2": "pCT",
-        "ai3": "pVM1_IG",
-        "ai96": "pVM1_LP",
+        "ai3": "pVM_IG",
+        "ai96": "pVM_LP",
         "ai104": "pGR6",
         "ai105": "pGR5",
         "ai106": "pGR4",
@@ -486,7 +478,7 @@
         "ai117": "pGM",
         "ai118": "pIM",
         "ai119": "pForeline",
-        "ai120": "pVM1_GP",
+        "ai120": "pVM_GP",
         "ai123": "DC5VPower",
         "ai124": "DC5VMainsDetect",
         "ai125": "pAmbient",
@@ -893,9 +885,9 @@
         "t10": "tLN_CT"
       }
     },
-    "ActuatorController1": {
+    "ActuatorController": {
       "$type": "AeonHacs.Components.ActuatorController, AeonHacs.Core",
-      "Name": "ActuatorController1",
+      "Name": "ActuatorController",
       "Channels": 56,
       "AeonServo": {
         "Name": "AeonServo",
@@ -935,7 +927,7 @@
         "IdleTimeout": -1
       },
       "SerialController": {
-        "Name": "ActuatorController1.SerialController",
+        "Name": "ActuatorController.SerialController",
         "SerialDevice": {
           "RtsMode": "Enabled",
           "PortSettings": {
@@ -1127,12 +1119,12 @@
         "17": "vLN_Spare1"
       }
     },
-    "SwitchBank1": {
+    "SwitchBank": {
       "$type": "AeonHacs.Components.SwitchBank, AeonHacs.Core",
-      "Name": "SwitchBank1",
+      "Name": "SwitchBank",
       "Channels": 32,
       "SerialController": {
-        "Name": "SwitchBank1.SerialController",
+        "Name": "SwitchBank.SerialController",
         "SerialDevice": {
           "RtsMode": "Enabled",
           "PortSettings": {
@@ -1195,9 +1187,9 @@
     }
   },
   "ManagedDevices": {
-    "pVM1_IG.Enable": {
+    "pVM_IG.Enable": {
       "$type": "AeonHacs.Components.DigitalOutput, AeonHacs.Core",
-      "Name": "pVM1_IG.Enable",
+      "Name": "pVM_IG.Enable",
       "OnOffState": "Off",
       "StopAction": "TurnOff"
     },
@@ -1227,11 +1219,11 @@
     }
   },
   "Meters": {
-    "pVM1": {
+    "pVM": {
       "$type": "AeonHacs.Components.DualManometer, AeonHacs.Core",
-      "Name": "pVM1",
-      "HighPressureManometer": "pVM1_HP",
-      "LowPressureManometer": "pVM1_IG",
+      "Name": "pVM",
+      "HighPressureManometer": "pVM_HP",
+      "LowPressureManometer": "pVM_IG",
       "MaximumLowPressure": 0.001,
       "MinimumHighPressure": 0.01,
       "SwitchpointPressure": 0.008,
@@ -1252,11 +1244,11 @@
       "Rising": 0.0,
       "ZerosToAverage": 30
     },
-    "pVM1_HP": {
+    "pVM_HP": {
       "$type": "AeonHacs.Components.DualManometer, AeonHacs.Core",
-      "Name": "pVM1_HP",
-      "HighPressureManometer": "pVM1_GP",
-      "LowPressureManometer": "pVM1_LP",
+      "Name": "pVM_HP",
+      "HighPressureManometer": "pVM_GP",
+      "LowPressureManometer": "pVM_LP",
       "MaximumLowPressure": 3.0,
       "MinimumHighPressure": 4.0,
       "SwitchpointPressure": 0.0,
@@ -1502,9 +1494,9 @@
       "Rising": 0.5,
       "ZerosToAverage": 30
     },
-    "pVM1_GP": {
+    "pVM_GP": {
       "$type": "AeonHacs.Components.AIManometer, AeonHacs.Core",
-      "Name": "pVM1_GP",
+      "Name": "pVM_GP",
       "MaximumVoltage": 10.0,
       "AnalogInputMode": "SingleEnded",
       "MinimumVoltage": 0.0,
@@ -1547,9 +1539,9 @@
       "Rising": 0.5,
       "ZerosToAverage": 30
     },
-    "pVM1_LP": {
+    "pVM_LP": {
       "$type": "AeonHacs.Components.AIManometer, AeonHacs.Core",
-      "Name": "pVM1_LP",
+      "Name": "pVM_LP",
       "MaximumVoltage": 10.0,
       "AnalogInputMode": "SingleEnded",
       "MinimumVoltage": 0.0,
@@ -1614,12 +1606,12 @@
       "Rising": 0.0,
       "ZerosToAverage": 30
     },
-    "pVM1_IG": {
+    "pVM_IG": {
       "$type": "AeonHacs.Components.EdwardsAimX, AeonHacs.Core",
-      "Name": "pVM1_IG",
+      "Name": "pVM_IG",
       "errorSignalVoltage": 2.0,
       "AnalogInputMode": "SingleEnded",
-      "DigitalOutput": "pVM1_IG.Enable",
+      "DigitalOutput": "pVM_IG.Enable",
       "MillisecondsToValid": 5000,
       "MinimumMillisecondsOff": 2000,
       "UnitSymbol": "Torr",
@@ -2236,12 +2228,7 @@
           }
         ]
       },
-      "RateOfChange": {
-        "Name": "",
-        "FilterLength": 13,
-        "MaxIntervalMilliseconds": 60000.0,
-        "Resolution": 0.01
-      },
+      "RateOfChange": null,
       "Stable": 0.0,
       "Falling": 0.0,
       "Rising": 0.0,
@@ -5560,7 +5547,6 @@
       "StopAction": "TurnOff"
     }
   },
-  "Switches": {},
   "Heaters": {
     "hIP1CCS": {
       "$type": "AeonHacs.Components.HC6Heater, AeonHacs.Core",
@@ -7203,12 +7189,12 @@
     }
   },
   "VacuumSystems": {
-    "VacuumSystem1": {
+    "VacuumSystem": {
       "$type": "AeonHacs.Components.VacuumSystem, AeonHacs.Core",
-      "Name": "VacuumSystem1",
+      "Name": "VacuumSystem",
       "TurboPump": null,
       "RoughingPump": null,
-      "Manometer": "pVM1",
+      "Manometer": "pVM",
       "ForelineManometer": "pForeline",
       "HighVacuumValve": "vHV",
       "LowVacuumValve": "vLV",
@@ -7255,7 +7241,7 @@
       "$type": "AeonHacs.Components.Chamber, AeonHacs.Core",
       "Name": "VM",
       "MilliLiters": 141.5843129690239,
-      "Manometer": "pVM1",
+      "Manometer": "pVM",
       "Thermometer": null,
       "Heater": null,
       "Coldfinger": null,
@@ -8097,7 +8083,7 @@
         "IMC"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vIML_IMC",
         "vIMR_IMC",
@@ -8125,7 +8111,7 @@
         "IP5",
         "IP6"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vIML_IMC"
       ],
@@ -8155,7 +8141,7 @@
         "IP11",
         "IP12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vIMR_IMC"
       ],
@@ -8178,7 +8164,7 @@
         "CT"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vIMC_CT",
         "vCT_VTT",
@@ -8199,7 +8185,7 @@
         "VTT"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vCT_VTT",
         "vVTT_MC"
@@ -8225,7 +8211,7 @@
         "MCP1",
         "MCP2"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vVTT_MC",
         "vMC_Split"
@@ -8250,7 +8236,7 @@
         "Split"
       ],
       "Ports": [],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vMC_Split",
         "vGML_GMC",
@@ -8275,7 +8261,7 @@
         "GMC"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vGML_GMC",
         "vGMR_GMC",
@@ -8304,7 +8290,7 @@
         "GR5",
         "GR6"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vGML_GMC"
       ],
@@ -8334,7 +8320,7 @@
         "GR11",
         "GR12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vGMR_GMC"
       ],
@@ -8357,7 +8343,7 @@
         "VM"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vHe_VM",
         "vH2_VM",
@@ -8390,7 +8376,7 @@
         "IP5",
         "IP6"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vIMR_IMC",
         "vIMC_CT",
@@ -8421,7 +8407,7 @@
         "IP11",
         "IP12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vIML_IMC",
         "vIMC_CT",
@@ -8459,7 +8445,7 @@
         "IP11",
         "IP12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vIMC_CT",
         "vIMC_VM"
@@ -8491,7 +8477,7 @@
         "IP5",
         "IP6"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vIMR_IMC",
         "vCT_VTT",
@@ -8525,7 +8511,7 @@
         "IP11",
         "IP12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vIML_IMC",
         "vCT_VTT",
@@ -8566,7 +8552,7 @@
         "IP11",
         "IP12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vCT_VTT",
         "vCT_VM",
@@ -8609,7 +8595,7 @@
         "MCP1",
         "MCP2"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vMC_Split",
         "vCT_VM",
@@ -8636,7 +8622,7 @@
         "VTT"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vIMC_CT",
         "vVTT_MC",
@@ -8664,7 +8650,7 @@
         "MCP1",
         "MCP2"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vCT_VTT",
         "vMC_Split"
@@ -8695,7 +8681,7 @@
         "MCP1",
         "MCP2"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vVTT_MC",
         "vSplit_GMC"
@@ -8740,7 +8726,7 @@
         "MCP1",
         "MCP2"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vVTT_MC",
         "vGMC_VM"
@@ -8775,7 +8761,7 @@
         "GR5",
         "GR6"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vVTT_MC",
         "vGMR_GMC",
@@ -8810,7 +8796,7 @@
         "GR11",
         "GR12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vVTT_MC",
         "vGML_GMC",
@@ -8837,7 +8823,7 @@
         "MCP2"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vVTT_MC",
         "vMC_Split"
@@ -8869,7 +8855,7 @@
         "GMC"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vVTT_MC",
         "vGML_GMC",
@@ -8915,7 +8901,7 @@
         "GR11",
         "GR12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vVTT_MC",
         "vGMC_VM"
@@ -8950,7 +8936,7 @@
         "GR5",
         "GR6"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vGMR_GMC",
         "vSplit_GMC",
@@ -8981,7 +8967,7 @@
         "GR11",
         "GR12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vGML_GMC",
         "vSplit_GMC",
@@ -9019,7 +9005,7 @@
         "GR11",
         "GR12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vSplit_GMC",
         "vGMC_VM"
@@ -9058,7 +9044,7 @@
         "IP11",
         "IP12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vHe_VM",
         "vH2_VM",
@@ -9103,7 +9089,7 @@
         "GR11",
         "GR12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vHe_VM",
         "vH2_VM",
@@ -9134,7 +9120,7 @@
         "Split"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vGR1_GML",
         "vGR2_GML",
@@ -9213,7 +9199,7 @@
         "GR11",
         "GR12"
       ],
-      "VacuumSystem": "VacuumSystem1",
+      "VacuumSystem": "VacuumSystem",
       "Isolation": [
         "vCO2_VM",
         "vH2_VM",
@@ -9948,7 +9934,7 @@
           "Path": null
         },
         {
-          "Name": "pVM1",
+          "Name": "pVM",
           "Resolution": -1.0,
           "Format": "0.00e0",
           "Path": null
@@ -9966,31 +9952,31 @@
       "InsertLatestSkippedEntry": false,
       "Columns": [
         {
-          "Name": "pVM1",
+          "Name": "pVM",
           "Resolution": 1.0,
           "Format": "0.00e0",
           "Path": null
         },
         {
-          "Name": "pVM1_IG",
+          "Name": "pVM_IG",
           "Resolution": -1.0,
           "Format": "0.00e0",
           "Path": null
         },
         {
-          "Name": "pVM1_HP",
+          "Name": "pVM_HP",
           "Resolution": -1.0,
           "Format": "0.00e0",
           "Path": null
         },
         {
-          "Name": "pVM1_LP",
+          "Name": "pVM_LP",
           "Resolution": -1.0,
           "Format": "0.00e0",
           "Path": null
         },
         {
-          "Name": "pVM1_GP",
+          "Name": "pVM_GP",
           "Resolution": -1.0,
           "Format": "0.00e0",
           "Path": null
@@ -10526,10 +10512,10 @@
       "TimeStampFormat": "MM/dd/yyyy HH:mm:ss.fff\t",
       "ArchiveDaily": false
     },
-    "EventLog": {
+    "TestLog": {
       "$type": "AeonHacs.HacsLog, AeonHacs.Core",
-      "Name": "EventLog",
-      "FileName": "Event log.txt",
+      "Name": "TestLog",
+      "FileName": "Test data.txt",
       "Header": "",
       "TimeStampFormat": "MM/dd/yyyy HH:mm:ss.fff\t",
       "ArchiveDaily": false
@@ -10588,14 +10574,15 @@
       "State": "Monitor",
       "IdleTimeout": 500,
       "LogEverything": false
+    },
+    "Power": {
+        "$type": "AeonHacs.Components.Power, AeonHacs.Core",
+      "Name": "Power",
+      "DC5V": "DC5VPower",
+      "MainsDetect": "DC5VMainsDetect",
+      "MainsDetectMinimumVoltage": 4.0,
+      "MilliSecondsMainsDownLimit": 5000
     }
-  },
-  "Power": {
-    "Name": "Power",
-    "DC5V": "DC5VPower",
-    "MainsDetect": "DC5VMainsDetect",
-    "MainsDetectMinimumVoltage": 4.0,
-    "MilliSecondsMainsDownLimit": 5000
   },
   "CegsPreferences": {
     "Name": "CegsPreferences",
@@ -10845,9 +10832,56 @@
         "ParameterName": "WaitTimerMinutes",
         "Value": 10.0,
         "Description": "How many minutes to wait."
+      },
+      {
+        "ParameterName": "MaximumMinutesGrToReachTemperature",
+        "Value": 20.0,
+        "Description": "The maximum time a graphite reactor should take to reach its setpoint."
+      },
+      {
+        "ParameterName": "MaximumMinutesIpToReachTemperature",
+        "Value": 10.0,
+        "Description": "The maximum time an inlet port should take to reach its setpoint."
+      },
+      {
+        "ParameterName": "IpMinutes",
+        "Value": 60.0,
+        "Description": "Set time for the IP Timer."
+      },
+      {
+        "ParameterName": "IpTemperatureCushion",
+        "Value": 20.0,
+        "Description": "The acceptable range around IpSetpoint considered at temperature."
+      },
+      {
+        "ParameterName": "MaximumSecondsAdmitGas",
+        "Value": 60.0,
+        "Description": "The longest time allowed for admitting gas."
+      },
+      {
+        "ParameterName": "KeepFeUnderH2",
+        "Value": 0.0,
+        "Description": "Whether to evacuate H2 after preconditioning graphite reactors."
       }
     ]
   },
   "AutoFeedEnabled": false,
+  "Power": "Power",
+  "SampleLog": "SampleLog",
+  "TestLog": "TestLog",
+  "Ambient": "Ambient",
+  "VacuumSystem": "VacuumSystem",
+  "InletManifold": "IM",
+  "CoilTrap": "CT",
+  "VariableTemperatureTrap": "VTT",
+  "MeasurementChamber": "MC",
+  "SplitSection": "Split",
+  "d13CSection": null,
+  "GraphiteManifold": "GM",
+  "d13CManifold": null,
+  "VTT_MC": "VTT_MC",
+  "MC_Split": "MC_Split",
+  "SampleMeter": "ugCinMC",
+  "IpOvenRamper": null,
   "InletPort": "IP1"
 }
