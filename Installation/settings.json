@@ -327,7 +327,7 @@
           "Minutes": 15,
           "AdmitO2": true,
           "WaitForSetpoint": false,
-          "Name": "Pre-Burn",
+          "Name": "Clean",
           "Description": ""
         },
         {
@@ -885,9 +885,9 @@
         "t10": "tLN_CT"
       }
     },
-    "ActuatorController": {
+    "ActuatorController1": {
       "$type": "AeonHacs.Components.ActuatorController, AeonHacs.Core",
-      "Name": "ActuatorController",
+      "Name": "ActuatorController1",
       "Channels": 56,
       "AeonServo": {
         "Name": "AeonServo",
@@ -927,7 +927,7 @@
         "IdleTimeout": -1
       },
       "SerialController": {
-        "Name": "ActuatorController.SerialController",
+        "Name": "ActuatorController1.SerialController",
         "SerialDevice": {
           "RtsMode": "Enabled",
           "PortSettings": {
@@ -1395,7 +1395,7 @@
       },
       "RateOfChange": {
         "Name": "",
-        "FilterLength": 35,
+        "FilterLength": 13,
         "MaxIntervalMilliseconds": 1000.0,
         "Resolution": 0.01
       },
@@ -3621,13 +3621,13 @@
           "Name": "Close",
           "Value": 1550,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1050,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3642,13 +3642,13 @@
           "Name": "Close",
           "Value": 1660,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1160,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3663,13 +3663,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3684,13 +3684,13 @@
           "Name": "Close",
           "Value": 1550,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1150,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3705,13 +3705,13 @@
           "Name": "Close",
           "Value": 1560,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1060,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3726,13 +3726,13 @@
           "Name": "Close",
           "Value": 1800,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1300,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3747,13 +3747,13 @@
           "Name": "Close",
           "Value": 1730,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1230,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3768,13 +3768,13 @@
           "Name": "Close",
           "Value": 1560,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1060,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3789,13 +3789,13 @@
           "Name": "Close",
           "Value": 1640,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1140,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3810,13 +3810,13 @@
           "Name": "Close",
           "Value": 1750,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1250,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3831,13 +3831,13 @@
           "Name": "Close",
           "Value": 1640,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1140,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3852,13 +3852,13 @@
           "Name": "Close",
           "Value": 1500,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3873,13 +3873,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3894,13 +3894,13 @@
           "Name": "Close",
           "Value": 1470,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 970,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3915,13 +3915,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3936,13 +3936,13 @@
           "Name": "Close",
           "Value": 1630,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1130,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3957,13 +3957,13 @@
           "Name": "Close",
           "Value": 1750,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1250,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3978,13 +3978,13 @@
           "Name": "Close",
           "Value": 1580,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1080,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -3999,13 +3999,13 @@
           "Name": "Close",
           "Value": 1800,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1300,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4020,13 +4020,13 @@
           "Name": "Close",
           "Value": 1710,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1210,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4041,13 +4041,13 @@
           "Name": "Close",
           "Value": 1540,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1040,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4062,13 +4062,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4083,13 +4083,13 @@
           "Name": "Close",
           "Value": 1760,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1260,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4104,13 +4104,13 @@
           "Name": "Close",
           "Value": 1490,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 990,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4125,13 +4125,13 @@
           "Name": "Close",
           "Value": 1650,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1150,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4146,13 +4146,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4167,13 +4167,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4188,13 +4188,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4209,13 +4209,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4230,13 +4230,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4251,13 +4251,13 @@
           "Name": "Close",
           "Value": 1500,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 980,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4272,13 +4272,13 @@
           "Name": "Close",
           "Value": 1730,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1230,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4293,13 +4293,13 @@
           "Name": "Close",
           "Value": 1650,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1150,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4314,13 +4314,13 @@
           "Name": "Close",
           "Value": 1500,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4335,13 +4335,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4356,13 +4356,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4377,13 +4377,13 @@
           "Name": "Close",
           "Value": 1750,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1250,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4398,13 +4398,13 @@
           "Name": "Close",
           "Value": 1600,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1100,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4419,13 +4419,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4440,13 +4440,13 @@
           "Name": "Close",
           "Value": 1650,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1150,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4461,13 +4461,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4482,13 +4482,13 @@
           "Name": "Close",
           "Value": 1700,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4503,19 +4503,19 @@
           "Name": "Close",
           "Value": 2000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1100,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4530,31 +4530,31 @@
           "Name": "Close",
           "Value": 2000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "ColdTrickle",
           "Value": 1375,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "WarmTrickle",
           "Value": 1350,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4569,19 +4569,19 @@
           "Name": "Close",
           "Value": 2025,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1025,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4596,19 +4596,19 @@
           "Name": "Close",
           "Value": 2050,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1240,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4623,19 +4623,19 @@
           "Name": "Close",
           "Value": 2000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1300,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4650,19 +4650,19 @@
           "Name": "Close",
           "Value": 1990,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1270,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4677,19 +4677,19 @@
           "Name": "Close",
           "Value": 1940,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1115,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 950,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4704,19 +4704,19 @@
           "Name": "Close",
           "Value": 1950,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1150,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 950,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4731,19 +4731,19 @@
           "Name": "Close",
           "Value": 2050,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1270,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1050,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4758,19 +4758,19 @@
           "Name": "Close",
           "Value": 2000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1350,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4785,19 +4785,19 @@
           "Name": "Close",
           "Value": 2050,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1300,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1050,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4812,19 +4812,19 @@
           "Name": "Close",
           "Value": 2000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1200,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4839,19 +4839,19 @@
           "Name": "Close",
           "Value": 2025,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1275,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1025,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4866,19 +4866,19 @@
           "Name": "Close",
           "Value": 1950,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1225,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1050,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4893,19 +4893,19 @@
           "Name": "Close",
           "Value": 2000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1250,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4920,19 +4920,19 @@
           "Name": "Close",
           "Value": 2050,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1400,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1050,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4947,19 +4947,19 @@
           "Name": "Close",
           "Value": 2000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1400,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -4974,19 +4974,19 @@
           "Name": "Close",
           "Value": 2000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open",
           "Value": 1400,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         },
         {
           "Name": "Open fully",
           "Value": 1000,
           "Incremental": false,
-          "Configuration": "t1.0"
+          "Configuration": "t0.8"
         }
       ]
     },
@@ -5611,7 +5611,7 @@
       "PidSetup": "PID_IP3",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 950.0,
+      "MaximumSetpoint": 850.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5639,7 +5639,7 @@
       "PidSetup": "PID_IP4",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 950.0,
+      "MaximumSetpoint": 850.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5667,7 +5667,7 @@
       "PidSetup": "PID_IP5",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 950.0,
+      "MaximumSetpoint": 850.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5695,7 +5695,7 @@
       "PidSetup": "PID_IP6",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 950.0,
+      "MaximumSetpoint": 850.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5723,7 +5723,7 @@
       "PidSetup": "PID_IP7",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 950.0,
+      "MaximumSetpoint": 850.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5751,7 +5751,7 @@
       "PidSetup": "PID_IP8",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 950.0,
+      "MaximumSetpoint": 850.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5779,7 +5779,7 @@
       "PidSetup": "PID_IP9",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 950.0,
+      "MaximumSetpoint": 850.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5807,7 +5807,7 @@
       "PidSetup": "PID_IP10",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 950.0,
+      "MaximumSetpoint": 850.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5835,7 +5835,7 @@
       "PidSetup": "PID_IP11",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 950.0,
+      "MaximumSetpoint": 850.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -5863,7 +5863,7 @@
       "PidSetup": "PID_IP12",
       "Setpoint": 150.0,
       "MinimumSetpoint": 0.0,
-      "MaximumSetpoint": 950.0,
+      "MaximumSetpoint": 850.0,
       "StopAction": "None",
       "OnOffState": "Off",
       "UnitSymbol": "°C",
@@ -6835,9 +6835,9 @@
       "Liters": null,
       "LevelSensor": "tLNManifold1",
       "OverflowSensor": "tLNOverflow",
-      "OverflowTrigger": 25,
+      "OverflowTrigger": 15,
       "MinimumLiters": 10,
-      "TargetTemperature": -180,
+      "TargetTemperature": -185,
       "FillTrigger": 5,
       "SecondsSlowToFill": 240,
       "ColdTemperature": -150,
@@ -6852,12 +6852,12 @@
       "Liters": null,
       "LevelSensor": "tLNManifold2",
       "OverflowSensor": "tLNOverflow",
-      "OverflowTrigger": 25,
+      "OverflowTrigger": 15,
       "MinimumLiters": 10,
-      "TargetTemperature": -190,
+      "TargetTemperature": -185,
       "FillTrigger": 5,
       "SecondsSlowToFill": 240,
-      "ColdTemperature": -80,
+      "ColdTemperature": -150,
       "State": "Monitor",
       "IdleTimeout": 500,
       "LogEverything": false
@@ -6877,6 +6877,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 60.0,
       "StopAction": "TurnOff",
@@ -6897,6 +6898,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 5,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -6917,6 +6919,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 7.0,
       "StopAction": "TurnOff",
@@ -6937,6 +6940,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -6957,6 +6961,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -6977,6 +6982,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -6997,6 +7003,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7017,6 +7024,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7037,6 +7045,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7057,6 +7066,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7077,6 +7087,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7097,6 +7108,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7117,6 +7129,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7137,6 +7150,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7157,6 +7171,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
+      "MaximumMinutesToFreeze": 4,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7211,7 +7226,7 @@
       "LowVacuumRequiredPressure": 8.0,
       "StateStopwatch": {
         "IsRunning": true,
-        "Accumulated": 4043
+        "Accumulated": 2288
       },
       "IdleTimeout": 50
     }
@@ -8087,7 +8102,8 @@
       "Isolation": [
         "vIML_IMC",
         "vIMR_IMC",
-        "vIMC_CT"
+        "vIMC_CT",
+        "vIMC_VM"
       ],
       "InternalValves": null,
       "PathToVacuum": [
@@ -9122,18 +9138,6 @@
       "Ports": null,
       "VacuumSystem": "VacuumSystem",
       "Isolation": [
-        "vGR1_GML",
-        "vGR2_GML",
-        "vGR3_GML",
-        "vGR4_GML",
-        "vGR5_GML",
-        "vGR6_GML",
-        "vGR7_GMR",
-        "vGR8_GMR",
-        "vGR9_GMR",
-        "vGR10_GMR",
-        "vGR11_GMR",
-        "vGR12_GMR",
         "vHe_VM",
         "vH2_VM",
         "vCO2_VM",
@@ -9946,9 +9950,9 @@
       "TimeStampFormat": "MM/dd/yyyy HH:mm:ss.fff\t",
       "ArchiveDaily": true
     },
-    "VM1PressureLog": {
+    "VMPressureLog": {
       "$type": "AeonHacs.Components.DataLog, AeonHacs.Core",
-      "Name": "VM1PressureLog",
+      "Name": "VMPressureLog",
       "InsertLatestSkippedEntry": false,
       "Columns": [
         {
@@ -10260,73 +10264,73 @@
         {
           "Name": "tGR1",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tGR2",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tGR3",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tGR4",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tGR5",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tGR6",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tGR7",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tGR8",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tGR9",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tGR10",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tGR11",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tGR12",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         }
       ],
@@ -10344,85 +10348,85 @@
         {
           "Name": "tLN_GR1",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_GR2",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_GR3",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_GR4",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_GR5",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_GR6",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_GR7",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_GR8",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_GR9",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_GR10",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_GR11",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_GR12",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLNManifold1",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLNManifold2",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         }
       ],
@@ -10440,37 +10444,37 @@
         {
           "Name": "tLN_CT",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_VTC",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLN_MC",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLNOverflow",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLNManifold1",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         },
         {
           "Name": "tLNManifold2",
           "Resolution": 1.0,
-          "Format": "0.00",
+          "Format": "0.0",
           "Path": null
         }
       ],
@@ -10576,7 +10580,7 @@
       "LogEverything": false
     },
     "Power": {
-        "$type": "AeonHacs.Components.Power, AeonHacs.Core",
+      "$type": "AeonHacs.Components.Power, AeonHacs.Core",
       "Name": "Power",
       "DC5V": "DC5VPower",
       "MainsDetect": "DC5VMainsDetect",
