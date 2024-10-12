@@ -4,6 +4,7 @@ C:
 CD "\Programs\Aeon Laboratories\Cegs12X"
 copy "%*\*.exe" > nul
 copy "%*\*.dll" > nul
+copy "%*\*.pdb" > nul
 copy "%*\*.deps.json" > nul
 copy "%*\*.runtimeconfig.json" > nul
 echo *** System software updated *** >> "log\Event log.txt"
