@@ -7,63 +7,63 @@
     mc:Ignorable="d">
 
     <StackPanel>
-        <wpf:Valve Component="{Binding Component.LNSupplyValve, ElementName=manifold1}" HelpText="LN Manifold 1 Supply Valve" HorizontalAlignment="Right" d:ValveState="Closed" />
-        <wpf:LNManifold x:Name="manifold1" Component="LNManifold1" HelpText="LN Manifold 1">
-            <wpf:Valve Component="vLN_Spare1" HelpText="Spare LN valve 1" />
-            <wpf:Valve Component="vLN_Spare2" HelpText="Spare LN valve 2" />
-            <wpf:Valve Component="vLN_Spare3" HelpText="Spare LN valve 3" />
-            <wpf:Valve Component="vLN_GR1" HelpText="GR1 LN valve" />
-            <wpf:Valve Component="vLN_GR2" HelpText="GR2 LN valve" />
-            <wpf:Valve Component="vLN_GR3" HelpText="GR3 LN valve" />
-            <wpf:Valve Component="vLN_GR4" HelpText="GR4 LN valve" />
-            <wpf:Valve Component="vLN_GR5" HelpText="GR5 LN valve" />
-            <wpf:Valve Component="vLN_GR6" HelpText="GR6 LN valve" />
+        <wpf:Valve Component="{Binding Component.LNSupplyValve, ElementName=manifold1}" HorizontalAlignment="Right" d:ValveState="Closed"/>
+        <wpf:LNManifold x:Name="manifold1" Component="LNManifold1">
+            <wpf:Valve Component="vLN_Spare1" />
+            <wpf:Valve Component="vLN_Spare2" />
+            <wpf:Valve Component="vLN_Spare3" />
+            <wpf:Valve Component="vLN_GR1" />
+            <wpf:Valve Component="vLN_GR2" />
+            <wpf:Valve Component="vLN_GR3" />
+            <wpf:Valve Component="vLN_GR4" />
+            <wpf:Valve Component="vLN_GR5" />
+            <wpf:Valve Component="vLN_GR6" />
         </wpf:LNManifold>
 
         <StackPanel AutomationProperties.HelpText="Air manifold 1" Background="Transparent">
             <TextBlock Text="Air Manifold 1" HorizontalAlignment="Center" FontSize="10" Margin="0,10,0,2"/>
             <wpf:StackingPanel Orientation="Right" HorizontalAlignment="Center" Spacing="4">
-                <wpf:Valve Component="vAir_Spare1" HelpText="Spare air valve 1" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_Spare2" HelpText="Spare air valve 2" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_Spare3" HelpText="Spare air valve 3" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_GR1" HelpText="GR1 air valve" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_GR2" HelpText="GR2 air valve"  d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_GR3" HelpText="GR3 air valve" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_GR4" HelpText="GR4 air valve" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_GR5" HelpText="GR5 air valve"  d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_GR6" HelpText="GR6 air valve" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_Spare1" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_Spare2" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_Spare3" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_GR1" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_GR2" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_GR3" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_GR4" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_GR5" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_GR6" d:ValveState="Closed" />
             </wpf:StackingPanel>
         </StackPanel>
-        
-        <wpf:Valve Component="{Binding Component.LNSupplyValve, ElementName=manifold2}" HelpText="LN Manifold 2 Supply Valve" HorizontalAlignment="Right" Margin="0,15,0,0" d:ValveState="Closed" />
-        <wpf:LNManifold x:Name="manifold2" Component="LNManifold2" HelpText="LN Manifold 2">
-            <wpf:Valve Component="vLN_GR7" HelpText="GR7 LN valve" />
-            <wpf:Valve Component="vLN_GR8" HelpText="GR8 LN valve" />
-            <wpf:Valve Component="vLN_GR9" HelpText="GR9 LN valve" />
-            <wpf:Valve Component="vLN_GR10" HelpText="GR10 LN valve" />
-            <wpf:Valve Component="vLN_MC" HelpText="MC LN valve" />
-            <wpf:Valve Component="vLN_GR11" HelpText="GR11 LN valve" />
-            <wpf:Valve Component="vLN_VTC" HelpText="VTC LN valve" />
-            <wpf:Valve Component="vLN_CT" HelpText="CT LN valve" />
-            <wpf:Valve Component="vLN_GR12" HelpText="GR12 LN valve" />
+
+        <wpf:Valve Component="{Binding Component.LNSupplyValve, ElementName=manifold2}" Margin="0,15,0,0" HorizontalAlignment="Right" d:ValveState="Closed" />
+        <wpf:LNManifold x:Name="manifold2" Component="LNManifold2" >
+            <wpf:Valve Component="vLN_GR7" />
+            <wpf:Valve Component="vLN_GR8" />
+            <wpf:Valve Component="vLN_GR9" />
+            <wpf:Valve Component="vLN_GR10" />
+            <wpf:Valve Component="vLN_MC" />
+            <wpf:Valve Component="vLN_GR11" />
+            <wpf:Valve Component="vLN_VTT" />
+            <wpf:Valve Component="vLN_CT" />
+            <wpf:Valve Component="vLN_GR12" />
         </wpf:LNManifold>
         
         <StackPanel AutomationProperties.HelpText="Air manifold 2" Background="Transparent">
             <TextBlock Text="Air Manifold 2" HorizontalAlignment="Center" FontSize="10" Margin="0,10,0,2"/>
             <wpf:StackingPanel Orientation="Right" HorizontalAlignment="Center" Spacing="4">
-                <wpf:Valve Component="vAir_GR7" HelpText="GR7 air valve" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_GR8" HelpText="GR8 air valve" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_GR9" HelpText="GR9 air valve" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_GR10" HelpText="GR10 air valve" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_MC" HelpText="MC air valve" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_GR11" HelpText="GR11 air valve" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_VTC" HelpText="VTC air valve" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_CT" HelpText="CT air valve" d:ValveState="Closed" />
-                <wpf:Valve Component="vAir_GR12" HelpText="GR12 air valve" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_GR7" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_GR8" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_GR9" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_GR10" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_MC" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_GR11" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_VTT" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_CT" d:ValveState="Closed" />
+                <wpf:Valve Component="vAir_GR12" d:ValveState="Closed" />
             </wpf:StackingPanel>
         </StackPanel>
-        
-        <TextBlock wpf:View.Component="tLNOverflow" AutomationProperties.HelpText="LN overflow sensor"
+
+        <TextBlock wpf:View.Component="tLNOverflow"
                 DataContext="{Binding (wpf:View.Component), RelativeSource={RelativeSource Self}}"
                 FontSize="10" Margin="0,20,0,0" Background="Transparent" HorizontalAlignment="Center">
             <Run Text="LN overflow sensor:" />
