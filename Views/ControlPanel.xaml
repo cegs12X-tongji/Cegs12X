@@ -61,7 +61,7 @@
                         <Border Width="350"  AutomationProperties.HelpText="Process Step"
                                 BorderBrush="{x:Static SystemColors.ActiveBorderBrush}" BorderThickness="0.5"
                                 Margin="0,2,3,2" Padding="3,0" >
-                            <TextBlock Text="{Binding Component.ProcessStep.CurrentStep.Description, ElementName=Cegs, FallbackValue=''}" 
+                            <TextBlock Text="{Binding Component.ProcessStep.Description, ElementName=Cegs, FallbackValue=''}" 
                                      VerticalAlignment="Center"/>
                         </Border>
                     </StackPanel>
@@ -75,7 +75,7 @@
                         <Border AutomationProperties.HelpText="Process Substep"
                                 BorderBrush="{x:Static SystemColors.ActiveBorderBrush}" BorderThickness="0.5"
                                 Width="350" Margin="0,2,3,2" Padding="3,0">
-                            <TextBlock Text="{Binding Component.ProcessSubStep.CurrentStep.Description, ElementName=Cegs, FallbackValue=''}" 
+                            <TextBlock Text="{Binding Component.ProcessSubStep.Description, ElementName=Cegs, FallbackValue='Null path', TargetNullValue='Null'}" 
                                     VerticalAlignment="Center"/>
                         </Border>
                     </StackPanel>
