@@ -3696,7 +3696,7 @@
       "Description": "Micrograms of carbon in the measurement chamber",
       "UnitSymbol": "ugC",
       "Ratiometric": false,
-      "MaxValue": 0.0,
+      "MaxValue": 3000.0,
       "MinValue": 0.0,
       "Sensitivity": 0.01,
       "Resolution": 0.01,
@@ -3799,7 +3799,7 @@
         },
         {
           "Name": "Open",
-          "Value": 1200,
+          "Value": 700,
           "Incremental": false,
           "Configuration": "t0.8"
         }
@@ -7217,7 +7217,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 60.0,
@@ -7244,7 +7244,7 @@
         "FreezeTrigger": 5,
         "RaiseTrigger": 2,
         "MaximumSecondsLNFlowing": 60,
-        "MaximumMinutesToFreeze": 4,
+        "MaximumMinutesToFreeze": 10,
         "MaximumMinutesToThaw": 10,
         "SecondsToWaitAfterRaised": 5,
         "NearAirTemperature": 10.0,
@@ -7261,7 +7261,7 @@
       "MaximumWarmHeaterPower": 3.0,
       "WarmHeaterPid": "VtcWarm",
       "ColdTemperature": -170,
-      "MaximumMinutesToFreeze": 8,
+      "MaximumMinutesToFreeze": 15,
       "MaximumMinutesToThaw": 10,
       "CleanupTemperature": 50,
       "HeaterOnTrickle": "WarmTrickle",
@@ -7285,7 +7285,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 7.0,
@@ -7308,7 +7308,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7331,7 +7331,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7354,7 +7354,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7377,7 +7377,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7400,7 +7400,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -7561,7 +7561,7 @@
       "FreezeTrigger": 5,
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
-      "MaximumMinutesToFreeze": 4,
+      "MaximumMinutesToFreeze": 10,
       "MaximumMinutesToThaw": 10,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
@@ -11090,36 +11090,6 @@
         "ParameterName": "HoldSampleAtPorts",
         "Value": "NaN",
         "Description": "Set GR and d13C FTCs to Standby and hold to start reactions later."
-      },
-      {
-        "ParameterName": "NumberOfSplits",
-        "Value": 5.0,
-        "Description": "Number of splits to take for an RPO sample"
-      },
-      {
-        "ParameterName": "Split1TargetUgc",
-        "Value": 120.0,
-        "Description": "Target sample size (UgC) for the first split (lowest T)"
-      },
-      {
-        "ParameterName": "Split2TargetUgc",
-        "Value": 240.0,
-        "Description": "Target sample size (UgC) for the second split (second T range)"
-      },
-      {
-        "ParameterName": "Split3TargetUgc",
-        "Value": 240.0,
-        "Description": "Target sample size (UgC) for the third split (third T range)"
-      },
-      {
-        "ParameterName": "Split4TargetUgc",
-        "Value": 240.0,
-        "Description": "Target sample size (UgC) for the fourth split (fourth T range)"
-      },
-      {
-        "ParameterName": "Split5TargetUgc",
-        "Value": 240.0,
-        "Description": "Target sample size (UgC) for the fifth split (highest T range)"
       },
       {
         "ParameterName": "MaximumSampleTemperature",
