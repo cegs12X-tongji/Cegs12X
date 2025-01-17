@@ -86,7 +86,8 @@ public partial class Cegs12X : Cegs
 
         // General-purpose process control actions
         ProcessDictionary["Wait for timer"] = WaitForTimer;
-        ProcessDictionary["Wait for operator"] = WaitForOperator;
+        ProcessDictionary["Wait for IP timer"] = WaitIpMinutes;
+        ProcessDictionary["Wait for operator"] = Notify.WaitForOperator;
         Separators.Add(ProcessDictionary.Count);
 
         // Transferring CO2
