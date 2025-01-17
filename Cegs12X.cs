@@ -1,4 +1,8 @@
-﻿namespace AeonHacs.Components;
+﻿using System.Collections.Generic;
+using static AeonHacs.Utilities.Utility;
+using System.Linq;
+
+namespace AeonHacs.Components;
 
 public partial class Cegs12X : Cegs
 {
@@ -65,6 +69,7 @@ public partial class Cegs12X : Cegs
         ProcessDictionary["Clear collection conditions"] = ClearCollectionConditions;
         ProcessDictionary["Collect until condition met"] = CollectUntilConditionMet;
         ProcessDictionary["Stop collecting"] = StopCollecting;
+        ProcessDictionary["Stop collecting immediately"] = StopCollectingImmediately;
         ProcessDictionary["Stop collecting after bleed down"] = StopCollectingAfterBleedDown;
         ProcessDictionary["Evacuate and Freeze VTT"] = FreezeVtt;
         ProcessDictionary["Admit Dead CO2 into MC"] = AdmitDeadCO2;
@@ -100,8 +105,8 @@ public partial class Cegs12X : Cegs
         ProcessDictionary["Close all Opened valves"] = CloseAllValves;
         ProcessDictionary["Exercise all LN Manifold valves"] = ExerciseLNValves;
         ProcessDictionary["Calibrate all multi-turn valves"] = CalibrateRS232Valves;
-        ProcessDictionary["Measure MC volume (KV in MCP1)"] = MeasureVolumeMC;
-        ProcessDictionary["Measure valve volumes (plug in MCP1)"] = MeasureValveVolumes;
+        ProcessDictionary["Measure MC volume (KV in MCP2)"] = MeasureVolumeMC;
+        ProcessDictionary["Measure valve volumes (plug in MCP2)"] = MeasureValveVolumes;
         ProcessDictionary["Measure remaining chamber volumes"] = MeasureRemainingVolumes;
         ProcessDictionary["Check GR H2 density ratios"] = CalibrateGRH2;
         ProcessDictionary["Calibrate VP He initial manifold pressure"] = CalibrateVPHeP0;
@@ -131,6 +136,52 @@ public partial class Cegs12X : Cegs
     /// </summary>
     protected override void Test()
     {
+        //var grs = new List<IHeater>()
+        //{
+        //    Find<IHeater>("hGR2"),
+        //    Find<IHeater>("hGR4"),
+        //    Find<IHeater>("hGR6"),
+        //    Find<IHeater>("hGR8"),
+        //    Find<IHeater>("hGR10"),
+        //    Find<IHeater>("hGR12")
+        //}.ToArray();
+        //PidStepTest(grs);
+        //return;
+
+        //CalibrateManualHeaters();
+        //return;
+
+        //var ips = new List<IInletPort>()
+        //{
+        //    Find<IInletPort>("IP2"),
+        //    Find<IInletPort>("IP4"),
+        //    Find<IInletPort>("IP6"),
+        //    Find<IInletPort>("IP8"),
+        //    Find<IInletPort>("IP10"),
+        //    Find<IInletPort>("IP12")
+        //};
+        //ips.ForEach(ip => ip.QuartzFurnace.TurnOn());
+        //WaitMinutes(10);
+        //PidStepTest(ips.Select(ip => ip.SampleFurnace).Cast<IHeater>().ToArray());
+        //ips.ForEach(ip => ip.QuartzFurnace.TurnOff());
+        //return;
+
+        //VttWarmStepTest();
+        //return;
+
+        //TestPressurize("H2.GM", 100);
+        //TestPressurize("H2.GM", 900);
+        //TestPressurize("He.MC", 80);
+        //TestPressurize("He.GM", 800);
+        //TestAdmit("He.GM", 800);
+        //TestAdmit("He.IM", 800);
+        //TestPressurize("CO2.MC", 75);
+        TestPressurize("CO2.MC", 850);
+        //TestAdmit("O2.IM", 1350);
+        return;
+
+        //TestValveRaceCondition();
+        //return;
     }
 
     #endregion Test functions
