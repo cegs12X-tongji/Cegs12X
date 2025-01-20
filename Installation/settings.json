@@ -2337,7 +2337,7 @@
         "Name": "",
         "Description": "",
         "Power": 2.0,
-        "StepChange": 0.008
+        "StepChange": 0.005
       },
       "Conversion": {
         "Name": "ValueConversion",
@@ -2347,11 +2347,11 @@
             "Name": "VoltsToTorr",
             "CalibrationData": [
               {
-                "Item1": 0.493537093510012,
+                "Item1": 0.499810463714926,
                 "Item2": 0.0
           },
           {
-                "Item1": 2.3339,
+                "Item1": 2.3489,
                 "Item2": 699.6
               }
             ]
