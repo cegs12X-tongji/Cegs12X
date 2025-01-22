@@ -1361,8 +1361,8 @@
               {
                 "Item1": 0.016655486803451903,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 6.8324,
                 "Item2": 104.4
               }
@@ -1373,7 +1373,7 @@
       "RateOfChange": {
         "Name": "",
         "Description": "",
-        "FilterLength": 19,
+        "FilterLength": 13,
         "MaxIntervalMilliseconds": 1000.0,
         "Resolution": 0.01
       },
@@ -1413,8 +1413,8 @@
               {
                 "Item1": 0.006641828845705464,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 8.3502,
                 "Item2": 10.45
               }
@@ -1425,7 +1425,7 @@
       "RateOfChange": {
         "Name": "",
         "Description": "",
-        "FilterLength": 21,
+        "FilterLength": 13,
         "MaxIntervalMilliseconds": 5000.0,
         "Resolution": 0.001
       },
@@ -1465,8 +1465,8 @@
               {
                 "Item1": 0.49621754928716183,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3398,
                 "Item2": 699.6
               }
@@ -1517,8 +1517,8 @@
               {
                 "Item1": 0.49621754928716183,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3398,
                 "Item2": 699.6
               }
@@ -1569,8 +1569,8 @@
               {
                 "Item1": 0.5063379152492451,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3542,
                 "Item2": 699.6
               }
@@ -1621,8 +1621,8 @@
               {
                 "Item1": 0.491840002790119,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3385,
                 "Item2": 699.6
               }
@@ -1630,13 +1630,7 @@
           }
         ]
       },
-      "RateOfChange": {
-        "Name": "",
-        "Description": "",
-        "FilterLength": 13,
-        "MaxIntervalMilliseconds": 1000.0,
-        "Resolution": 0.01
-      },
+      "RateOfChange": null,
       "Stable": 0.5,
       "Falling": -0.5,
       "Rising": 0.5,
@@ -1765,8 +1759,8 @@
               {
                 "Item1": 0.0,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 8.0091,
                 "Item2": 9.98
               }
@@ -1794,15 +1788,9 @@
             ]
           },
           {
-            "$type": "AeonHacs.Utilities.OperationSet, AeonHacs.Core",
-            "Name": "UnitConversion",
-            "Operations": [
-              {
             "$type": "AeonHacs.Utilities.Arithmetic, AeonHacs.Core",
-                "Name": "mbarToTorr",
+            "Name": "mbarToTorr",
             "Argument": "x*0.750061683"
-          }
-        ]
           }
         ]
       },
@@ -1843,8 +1831,8 @@
               {
                 "Item1": 0.5024755306109031,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3584,
                 "Item2": 699.6
               }
@@ -1889,8 +1877,8 @@
               {
                 "Item1": 0.48502904717936063,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3389,
                 "Item2": 699.6
               }
@@ -1935,8 +1923,8 @@
               {
                 "Item1": 0.511582771212074,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.351,
                 "Item2": 699.6
               }
@@ -1981,8 +1969,8 @@
               {
                 "Item1": 0.513530566543172,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3726,
                 "Item2": 699.6
               }
@@ -2027,8 +2015,8 @@
               {
                 "Item1": 0.509687309190977,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3634,
                 "Item2": 699.6
               }
@@ -2073,8 +2061,8 @@
               {
                 "Item1": 0.499810463714926,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3489,
                 "Item2": 699.6
               }
@@ -2119,8 +2107,8 @@
               {
                 "Item1": 0.5077413033104803,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3535,
                 "Item2": 699.6
               }
@@ -2165,8 +2153,8 @@
               {
                 "Item1": 0.493919501286593,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3364,
                 "Item2": 699.6
               }
@@ -2211,8 +2199,8 @@
               {
                 "Item1": 0.485995792089806,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3316,
                 "Item2": 699.6
               }
@@ -2257,8 +2245,8 @@
               {
                 "Item1": 0.48264922156404,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3307,
                 "Item2": 699.6
               }
@@ -2303,8 +2291,8 @@
               {
                 "Item1": 0.500587159290513,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3417,
                 "Item2": 699.6
               }
@@ -2349,8 +2337,8 @@
               {
                 "Item1": 0.499810463714926,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3489,
                 "Item2": 699.6
               }
@@ -2395,8 +2383,8 @@
               {
                 "Item1": 0.503,
                 "Item2": 0.0
-          },
-          {
+              },
+              {
                 "Item1": 2.3616,
                 "Item2": 699.6
               }
@@ -2441,8 +2429,8 @@
               {
                 "Item1": 0.692,
                 "Item2": 15.0
-          },
-          {
+              },
+              {
                 "Item1": 0.985,
                 "Item2": 30.0
               }
@@ -3841,7 +3829,7 @@
       "RateOfChange": {
         "Name": "",
         "Description": "",
-        "FilterLength": 21,
+        "FilterLength": 13,
         "MaxIntervalMilliseconds": 1000.0,
         "Resolution": 0.1
       },
@@ -7352,15 +7340,6 @@
       "Integral": 0.002,
       "Derivative": 370.0,
       "Preset": 0.7
-    },
-    "HeatTape120V470W": {
-      "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
-      "Name": "HeatTape120V470W",
-      "Description": "Generic PID parameters for 470W heat tape",
-      "Gain": 63.49,
-      "Integral": 0.02907,
-      "Derivative": 166.7,
-      "Preset": 8.273
     }
   },
   "LNManifolds": {
@@ -8290,9 +8269,9 @@
         "IsRunning": false,
         "Accumulated": 0
       },
-      "PriorPressure": 71.2,
-      "PressurePeak": 556,
-      "MilliLiters": 2.7728189422697764,
+      "PriorPressure": 0.0,
+      "PressurePeak": 0,
+      "MilliLiters": 2.75,
       "Valve": "vGR1_GML",
       "Manometer": "pGR1",
       "Thermometer": "tGR1",
@@ -8322,9 +8301,9 @@
         "IsRunning": false,
         "Accumulated": 0
       },
-      "PriorPressure": 48.300000000000004,
-      "PressurePeak": 500,
-      "MilliLiters": 2.619673747931876,
+      "PriorPressure": 0.0,
+      "PressurePeak": 0,
+      "MilliLiters": 2.75,
       "Valve": "vGR2_GML",
       "Manometer": "pGR2",
       "Thermometer": "tGR2",
@@ -8354,9 +8333,9 @@
         "IsRunning": false,
         "Accumulated": 0
       },
-      "PriorPressure": 286.5,
-      "PressurePeak": 1662,
-      "MilliLiters": 2.6249849672434467,
+      "PriorPressure": 0.0,
+      "PressurePeak": 0,
+      "MilliLiters": 2.75,
       "Valve": "vGR3_GML",
       "Manometer": "pGR3",
       "Thermometer": "tGR3",
@@ -8387,8 +8366,8 @@
         "Accumulated": 0
       },
       "PriorPressure": 0.0,
-      "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "PressurePeak": 0,
+      "MilliLiters": 2.75,
       "Valve": "vGR4_GML",
       "Manometer": "pGR4",
       "Thermometer": "tGR4",
@@ -8419,8 +8398,8 @@
         "Accumulated": 0
       },
       "PriorPressure": 0.0,
-      "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "PressurePeak": 0,
+      "MilliLiters": 2.75,
       "Valve": "vGR5_GML",
       "Manometer": "pGR5",
       "Thermometer": "tGR5",
@@ -8451,8 +8430,8 @@
         "Accumulated": 0
       },
       "PriorPressure": 0.0,
-      "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "PressurePeak": 0,
+      "MilliLiters": 2.75,
       "Valve": "vGR6_GML",
       "Manometer": "pGR6",
       "Thermometer": "tGR6",
@@ -8483,8 +8462,8 @@
         "Accumulated": 0
       },
       "PriorPressure": 0.0,
-      "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "PressurePeak": 0,
+      "MilliLiters": 2.75,
       "Valve": "vGR7_GMR",
       "Manometer": "pGR7",
       "Thermometer": "tGR7",
@@ -8515,8 +8494,8 @@
         "Accumulated": 0
       },
       "PriorPressure": 0.0,
-      "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "PressurePeak": 0,
+      "MilliLiters": 2.75,
       "Valve": "vGR8_GMR",
       "Manometer": "pGR8",
       "Thermometer": "tGR8",
@@ -8547,8 +8526,8 @@
         "Accumulated": 0
       },
       "PriorPressure": 0.0,
-      "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "PressurePeak": 0,
+      "MilliLiters": 2.75,
       "Valve": "vGR9_GMR",
       "Manometer": "pGR9",
       "Thermometer": "tGR9",
@@ -8579,8 +8558,8 @@
         "Accumulated": 0
       },
       "PriorPressure": 0.0,
-      "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "PressurePeak": 0,
+      "MilliLiters": 2.75,
       "Valve": "vGR10_GMR",
       "Manometer": "pGR10",
       "Thermometer": "tGR10",
@@ -8611,8 +8590,8 @@
         "Accumulated": 0
       },
       "PriorPressure": 0.0,
-      "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "PressurePeak": 0,
+      "MilliLiters": 2.75,
       "Valve": "vGR11_GMR",
       "Manometer": "pGR11",
       "Thermometer": "tGR11",
@@ -8643,8 +8622,8 @@
         "Accumulated": 0
       },
       "PriorPressure": 0.0,
-      "PressurePeak": 1250,
-      "MilliLiters": 3.3,
+      "PressurePeak": 0,
+      "MilliLiters": 2.75,
       "Valve": "vGR12_GMR",
       "Manometer": "pGR12",
       "Thermometer": "tGR12",
@@ -10628,7 +10607,7 @@
         {
           "Name": "pVM_GP",
           "Resolution": -1.0,
-          "Format": "0.00e0",
+          "Format": "0.0",
           "Path": ""
         }
       ],
@@ -11303,11 +11282,11 @@
         "Description": "Usually about 10 Torr over standard; should be slightly greater than the atmospheric pressure at any lab that will handle gas samples in septum-sealed vials (including external labs)."
       },
       {
-            "ParameterName": "LeakTestBasePressure",
-            "Value": 0.0005,
-            "Description": "Evacuate a section to this pressure when starting a leak test."
-        },
-        {
+        "ParameterName": "LeakTestBasePressure",
+        "Value": 0.0005,
+        "Description": "Evacuate a section to this pressure when starting a leak test."
+      },
+      {
         "ParameterName": "LeakTightTorrLitersPerSecond",
         "Value": 3E-05,
         "Description": "The effective gas load below which a volume is considered leak free."
@@ -11419,7 +11398,7 @@
       },
       {
         "ParameterName": "MeasurementSeconds",
-            "Value": 10.0,
+        "Value": 10.0,
         "Description": "How long to average a measurement."
       },
       {
@@ -11433,11 +11412,11 @@
         "Description": "Minimum Graphitization time."
       },
       {
-            "ParameterName": "ThawBeforeGraphitizing",
-            "Value": "NaN",
-            "Description": "Thaw the CO2 in the graphite reactor before starting the furnace."
-        },
-        {
+        "ParameterName": "ThawBeforeGraphitizing",
+        "Value": "NaN",
+        "Description": "Thaw the CO2 in the graphite reactor before starting the furnace."
+      },
+      {
         "ParameterName": "SplitEquilibrationSeconds",
         "Value": 0.0,
         "Description": "After expanding a sample into a larger section, how long to wait before subdividing it."
