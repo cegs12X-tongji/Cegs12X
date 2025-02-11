@@ -7305,24 +7305,6 @@
       "Derivative": 100.0,
       "Preset": 0.8
     },
-    "CFF60V88W": {
-      "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
-      "Name": "CFF60V88W",
-      "Description": "Generic PID parameters for a 60V 88W CF furnace",
-      "Gain": 25.0,
-      "Integral": 0.01,
-      "Derivative": 100.0,
-      "Preset": 0.8
-    },
-    "GROven200W": {
-      "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
-      "Name": "GROven200W",
-      "Description": "Generic PID parameters for a 200W GR oven",
-      "Gain": 19.23,
-      "Integral": 0.00672,
-      "Derivative": 283.6,
-      "Preset": 0.991
-    },
     "VtcCold": {
       "$type": "AeonHacs.Components.PidSetup, AeonHacs.Core",
       "Name": "VtcCold",
