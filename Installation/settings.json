@@ -8555,7 +8555,7 @@
       "State": "WaitService",
       "Size": "Standard",
       "Sample": null,
-      "Aliquot": 1,
+      "Aliquot": 0,
       "GraphitizingTemperature": 580,
       "SampleTemperatureOffset": 0,
       "SampleSetpoint": 580.0,
