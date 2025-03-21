@@ -11220,7 +11220,7 @@
       "$type": "AeonHacs.Components.AlertManager, AeonHacs.Core",
       "Name": "AlertManager",
       "Description": "Alert manager",
-      "AlertsEnabled": false,
+      "AlertsEnabled": true,
       "DuplicateMessageSuppressionDuration": "1.00:00:00"
     }
   },
