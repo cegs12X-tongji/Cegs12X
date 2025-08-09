@@ -82,16 +82,101 @@
           "Description": ""
         },
         {
-          "$type": "AeonHacs.Components.CombustionStep, AeonHacs.Core",
-          "Temperature": 150,
-          "Minutes": 15,
-          "AdmitO2": false,
-          "WaitForSetpoint": true,
-          "Name": "Combust",
+          "Name": "Enable sample setpoint ramping",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpRampRate",
+          "Description": "The target rate-of-change when raising the Inlet Port sample furnace's temperature.",
+          "Value": 30.0
+        },
+        {
+          "Name": "Adjust sample ramp rate",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpSetpoint",
+          "Description": "The Inlet Port sample furnace's target setpoint (the final setpoint when ramping).",
+          "Value": 110.0
+        },
+        {
+          "Name": "Adjust sample setpoint",
+          "Description": ""
+        },
+        {
+          "Name": "Turn on sample furnace",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpTemperatureCushion",
+          "Description": "The acceptable range around IpSetpoint considered at temperature.",
+          "Value": 1.0
+        },
+        {
+          "Name": "Wait for sample to rise to setpoint",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpRampRate",
+          "Description": "The target rate-of-change when raising the Inlet Port sample furnace's temperature.",
+          "Value": 9.0
+        },
+        {
+          "Name": "Adjust sample ramp rate",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpSetpoint",
+          "Description": "The Inlet Port sample furnace's target setpoint (the final setpoint when ramping).",
+          "Value": 170.0
+        },
+        {
+          "Name": "Adjust sample setpoint",
+          "Description": ""
+        },
+        {
+          "Name": "Wait for sample to rise to setpoint",
+          "Description": ""
+        },
+        {
+          "Name": "Evacuate and Freeze first trap",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpSetpoint",
+          "Description": "The Inlet Port sample furnace's target setpoint (the final setpoint when ramping).",
+          "Value": 200.0
+        },
+        {
+          "Name": "Adjust sample setpoint",
+          "Description": ""
+        },
+        {
+          "Name": "Wait for sample to rise to setpoint",
+          "Description": ""
+        },
+        {
+          "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
+          "Name": "IpMinutes",
+          "Description": "Set time for the IP Timer.",
+          "Value": 2.0
+        },
+        {
+          "Name": "Wait for IP timer",
           "Description": ""
         },
         {
           "Name": "Turn off IP furnaces",
+          "Description": ""
+        },
+        {
+          "Name": "Disable sample setpoint ramping",
           "Description": ""
         },
         {
@@ -104,7 +189,7 @@
         }
       ],
       "CheckList": [
-        "Combustion Chamber furnaces are raised",
+        "Inlet Port furnaces are raised",
         "GR furnaces are lowered",
         "GR FTCs are raised"
       ]
@@ -3856,6 +3941,12 @@
           "Configuration": "t1.0"
         },
         {
+          "Name": "Open 45",
+          "Value": 1205,
+          "Incremental": false,
+          "Configuration": "t1.0"
+        },
+        {
           "Name": "Open",
           "Value": 720,
           "Incremental": false,
@@ -4921,7 +5012,7 @@
         },
         {
           "Name": "Open fully",
-          "Value": 1000,
+          "Value": 1150,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -7378,7 +7469,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 60.0,
       "StopAction": "TurnOff",
@@ -7404,8 +7495,8 @@
         "FreezeTrigger": 5,
         "RaiseTrigger": 2,
         "MaximumSecondsLNFlowing": 60,
-        "MaximumMinutesToFreeze": 10,
-        "MaximumMinutesToThaw": 10,
+        "MaximumMinutesToFreeze": 15,
+        "MaximumMinutesToThaw": 20,
         "SecondsToWaitAfterRaised": 5,
         "NearAirTemperature": 10.0,
         "StopAction": "None",
@@ -7418,11 +7509,11 @@
       "WireTemperatureLimit": 65,
       "MaximumHeaterPower": 8.0,
       "HeaterPid": "VtcCold",
-      "MaximumWarmHeaterPower": 3.0,
+      "MaximumWarmHeaterPower": 4.0,
       "WarmHeaterPid": "VtcWarm",
       "ColdTemperature": -170,
       "MaximumMinutesToFreeze": 15,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "CleanupTemperature": 50,
       "HeaterOnTrickle": "WarmTrickle",
       "HeaterOffTrickle": "ColdTrickle",
@@ -7446,7 +7537,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 7.0,
       "StopAction": "TurnOff",
@@ -7469,7 +7560,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7492,7 +7583,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7515,7 +7606,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7538,7 +7629,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7561,7 +7652,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7584,7 +7675,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7607,7 +7698,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7630,7 +7721,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7653,7 +7744,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7676,7 +7767,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7699,7 +7790,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -7722,7 +7813,7 @@
       "RaiseTrigger": 2,
       "MaximumSecondsLNFlowing": 60,
       "MaximumMinutesToFreeze": 10,
-      "MaximumMinutesToThaw": 10,
+      "MaximumMinutesToThaw": 20,
       "SecondsToWaitAfterRaised": 8,
       "NearAirTemperature": 10.0,
       "StopAction": "TurnOff",
@@ -9806,7 +9897,8 @@
       "Destination": "GM",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 240
     },
     "H2.GML": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9821,7 +9913,8 @@
       "Destination": "GMC_GML",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 240
     },
     "H2.GMR": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9836,7 +9929,8 @@
       "Destination": "GMC_GMR",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 240
     },
     "He.GM": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9846,12 +9940,13 @@
       "SourceValve": "vHe_VM",
       "FlowValve": "vHeFlow",
       "Meter": "pGM",
-      "SecondsSettlingTime": 3.0,
+      "SecondsSettlingTime": 1.8,
       "FlowManager": "He.GMFlowManager",
       "Destination": "GM",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 240
     },
     "He.GML": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9861,12 +9956,13 @@
       "SourceValve": "vHe_VM",
       "FlowValve": "vHeFlow",
       "Meter": "pGM",
-      "SecondsSettlingTime": 3.0,
+      "SecondsSettlingTime": 1.8,
       "FlowManager": "He.GMFlowManager",
       "Destination": "GMC_GML",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 240
     },
     "He.GMR": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9876,12 +9972,13 @@
       "SourceValve": "vHe_VM",
       "FlowValve": "vHeFlow",
       "Meter": "pGM",
-      "SecondsSettlingTime": 3.0,
+      "SecondsSettlingTime": 1.8,
       "FlowManager": "He.GMFlowManager",
       "Destination": "GMC_GMR",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 240
     },
     "He.IM": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9891,12 +9988,13 @@
       "SourceValve": "vHe_VM",
       "FlowValve": "vHeFlow",
       "Meter": "pIM",
-      "SecondsSettlingTime": 0.9,
+      "SecondsSettlingTime": 3.0,
       "FlowManager": "He.IMFlowManager",
       "Destination": "IM",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 10
     },
     "He.IML": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9906,12 +10004,13 @@
       "SourceValve": "vHe_VM",
       "FlowValve": "vHeFlow",
       "Meter": "pIM",
-      "SecondsSettlingTime": 0.9,
+      "SecondsSettlingTime": 3.0,
       "FlowManager": "He.IMFlowManager",
       "Destination": "IML_IMC",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 10
     },
     "He.IMR": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9921,12 +10020,13 @@
       "SourceValve": "vHe_VM",
       "FlowValve": "vHeFlow",
       "Meter": "pIM",
-      "SecondsSettlingTime": 0.9,
+      "SecondsSettlingTime": 3.0,
       "FlowManager": "He.IMFlowManager",
       "Destination": "IMR_IMC",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 10
     },
     "He.MC": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9936,12 +10036,13 @@
       "SourceValve": "vHe_VM",
       "FlowValve": "vHeFlow",
       "Meter": "pMC",
-      "SecondsSettlingTime": 0.9,
+      "SecondsSettlingTime": 1.0,
       "FlowManager": "He.MCFlowManager",
       "Destination": "MC",
       "Path": "VM_Split",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 240
     },
     "He.MCA": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9956,7 +10057,8 @@
       "Destination": "MCA",
       "Path": "VM_Split",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 240
     },
     "He.MCA_GMC": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9966,12 +10068,13 @@
       "SourceValve": "vHe_VM",
       "FlowValve": "vHeFlow",
       "Meter": "pMC",
-      "SecondsSettlingTime": 0.9,
+      "SecondsSettlingTime": 3.0,
       "FlowManager": "He.MCFlowManager",
       "Destination": "MCA_GMC",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 240
     },
     "He.MC_GM": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9981,12 +10084,13 @@
       "SourceValve": "vHe_VM",
       "FlowValve": "vHeFlow",
       "Meter": "pMC",
-      "SecondsSettlingTime": 0.9,
+      "SecondsSettlingTime": 3.0,
       "FlowManager": "He.MCFlowManager",
       "Destination": "MC_GM",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 240
     },
     "He.MCA_GM": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -9996,12 +10100,13 @@
       "SourceValve": "vHe_VM",
       "FlowValve": "vHeFlow",
       "Meter": "pMC",
-      "SecondsSettlingTime": 0.9,
+      "SecondsSettlingTime": 3.0,
       "FlowManager": "He.MCFlowManager",
       "Destination": "MCA_GM",
       "Path": "VM",
       "PurgePressure": 5.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 240
     },
     "CO2.MC": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -10016,7 +10121,8 @@
       "Destination": "MC",
       "Path": "VM_Split",
       "PurgePressure": 3.0,
-      "SecondsToPurge": 20
+      "SecondsToPurge": 20,
+      "SecondsToPressurize": 240
     },
     "O2.IM": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -10026,12 +10132,13 @@
       "SourceValve": "vO2_VM",
       "FlowValve": null,
       "Meter": "pIM",
-      "SecondsSettlingTime": 0.9,
+      "SecondsSettlingTime": 3.0,
       "FlowManager": null,
       "Destination": "IM",
       "Path": "VM",
       "PurgePressure": 100.0,
-      "SecondsToPurge": 1
+      "SecondsToPurge": 1,
+      "SecondsToPressurize": 10
     },
     "O2.IML": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -10041,12 +10148,13 @@
       "SourceValve": "vO2_VM",
       "FlowValve": null,
       "Meter": "pIM",
-      "SecondsSettlingTime": 0.9,
+      "SecondsSettlingTime": 3.0,
       "FlowManager": null,
       "Destination": "IML_IMC",
       "Path": "VM",
       "PurgePressure": 100.0,
-      "SecondsToPurge": 1
+      "SecondsToPurge": 1,
+      "SecondsToPressurize": 10
     },
     "O2.IMR": {
       "$type": "AeonHacs.Components.GasSupply, AeonHacs.Core",
@@ -10056,12 +10164,13 @@
       "SourceValve": "vO2_VM",
       "FlowValve": null,
       "Meter": "pIM",
-      "SecondsSettlingTime": 0.9,
+      "SecondsSettlingTime": 3.0,
       "FlowManager": null,
       "Destination": "IMR_IMC",
       "Path": "VM",
       "PurgePressure": 100.0,
-      "SecondsToPurge": 1
+      "SecondsToPurge": 1,
+      "SecondsToPressurize": 10
     }
   },
   "FlowManagers": {
@@ -10093,8 +10202,8 @@
       "Meter": "pGM",
       "MillisecondsTimeout": 100,
       "SecondsCycle": 2.0,
-      "StartingMovement": -20,
-      "MaximumMovement": 12,
+      "StartingMovement": -10,
+      "MaximumMovement": 8,
       "MaximumRate": 50.0,
       "Lag": 15.0,
       "Deadband": 0.1,
@@ -10113,7 +10222,7 @@
       "Meter": "pGM",
       "MillisecondsTimeout": 100,
       "SecondsCycle": 2.0,
-      "StartingMovement": -20,
+      "StartingMovement": -15,
       "MaximumMovement": 12,
       "MaximumRate": 50.0,
       "Lag": 15.0,
@@ -11201,6 +11310,14 @@
       "IdleTimeout": 500,
       "LogEverything": false
     },
+    "IpOvenRamper": {
+      "$type": "AeonHacs.Components.OvenRamper, AeonHacs.Core",
+      "Name": "IpOvenRamper",
+      "Description": "Inlet port sample furnace ramper",
+      "RateDegreesPerMinute": 9.0,
+      "IdleTimeout": 1000,
+      "LogEverything": false
+    },
     "Power": {
       "$type": "AeonHacs.Components.Power, AeonHacs.Core",
       "Name": "Power",
@@ -11214,7 +11331,7 @@
       "$type": "AeonHacs.Components.AlertManager, AeonHacs.Core",
       "Name": "AlertManager",
       "Description": "Alert manager",
-      "AlertsEnabled": false,
+      "AlertsEnabled": true,
       "DuplicateMessageSuppressionDuration": "1.00:00:00"
     }
   },
@@ -11245,7 +11362,7 @@
     "DefaultParameters": [
       {
         "ParameterName": "CO2TransferMinutes",
-        "Value": 4.0,
+        "Value": 1.0,
         "Description": "Time to wait for CO2 transfer between chambers."
       },
       {
@@ -11345,7 +11462,7 @@
       },
       {
         "ParameterName": "GRFirstEvacuationMinutes",
-        "Value": 0.0,
+        "Value": 3.0,
         "Description": "How long to evacuate freshly serviced graphite reactors."
       },
       {
@@ -11375,7 +11492,7 @@
       },
       {
         "ParameterName": "IMO2Pressure",
-        "Value": 1350.0,
+        "Value": 1390.0,
         "Description": "An initial IM O2 pressure that will expand sufficient oxygen into the inlet port to fully combust a sample of maximum size. Typically, this means enough to fully oxidize about three mg C to CO2."
       },
       {
@@ -11390,12 +11507,17 @@
       },
       {
         "ParameterName": "IpMinutes",
-        "Value": 60.0,
+        "Value": 15.0,
         "Description": "Set time for the IP Timer."
       },
       {
+        "ParameterName": "IpRampRate",
+        "Value": 30.0,
+        "Description": "The target rate-of-change when raising the Inlet Port sample furnace's temperature."
+      },
+      {
         "ParameterName": "IpSetpoint",
-        "Value": 1000.0,
+        "Value": 150.0,
         "Description": "The Inlet Port sample furnace's target setpoint (the final setpoint when ramping)."
       },
       {
@@ -11430,7 +11552,7 @@
       },
       {
         "ParameterName": "LeakTestBasePressure",
-        "Value": 0.0005,
+        "Value": 0.001,
         "Description": "Evacuate a section to this pressure when starting a leak test."
       },
       {
@@ -11525,7 +11647,7 @@
       },
       {
         "ParameterName": "SkipMeasuringGRs",
-        "Value": "NaN",
+        "Value": 1.0,
         "Description": "Don't re-measure GR volumes during preconditioning."
       },
       {
@@ -11592,6 +11714,6 @@
   "VTT_MC": "VTT_MC",
   "MC_Split": "MC_Split",
   "SampleMeter": "ugCinMC",
-  "IpOvenRamper": null,
+  "IpOvenRamper": "IpOvenRamper",
   "Sample": null
 }
