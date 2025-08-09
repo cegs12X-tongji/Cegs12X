@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using static AeonHacs.Utilities.Utility;
-using System.Linq;
-
-namespace AeonHacs.Components;
+﻿namespace AeonHacs.Components;
 
 public partial class Cegs12X : Cegs
 {
@@ -71,6 +67,7 @@ public partial class Cegs12X : Cegs
         ProcessDictionary["Stop collecting"] = StopCollecting;
         ProcessDictionary["Stop collecting immediately"] = StopCollectingImmediately;
         ProcessDictionary["Stop collecting after bleed down"] = StopCollectingAfterBleedDown;
+        ProcessDictionary["Evacuate and Freeze first trap"] = FreezeFirstTrap;
         ProcessDictionary["Evacuate and Freeze VTT"] = FreezeVtt;
         ProcessDictionary["Admit Dead CO2 into MC"] = AdmitDeadCO2;
         ProcessDictionary["Purify CO2 in MC"] = CleanupCO2InMC;
@@ -81,8 +78,11 @@ public partial class Cegs12X : Cegs
         // Granular inlet port & sample process control
         ProcessDictionary["Turn on quartz furnace"] = TurnOnIpQuartzFurnace;
         ProcessDictionary["Turn off quartz furnace"] = TurnOffIpQuartzFurnace;
+        ProcessDictionary["Disable sample setpoint ramping"] = DisableIpRamp;
+        ProcessDictionary["Enable sample setpoint ramping"] = EnableIpRamp;
         ProcessDictionary["Turn on sample furnace"] = TurnOnIpSampleFurnace;
         ProcessDictionary["Adjust sample setpoint"] = AdjustIpSetpoint;
+        ProcessDictionary["Adjust sample ramp rate"] = AdjustIpRampRate;
         ProcessDictionary["Wait for sample to rise to setpoint"] = WaitIpRiseToSetpoint;
         ProcessDictionary["Wait for sample to fall to setpoint"] = WaitIpFallToSetpoint;
         ProcessDictionary["Turn off sample furnace"] = TurnOffIpSampleFurnace;
@@ -137,52 +137,6 @@ public partial class Cegs12X : Cegs
     /// </summary>
     protected override void Test()
     {
-        //var grs = new List<IHeater>()
-        //{
-        //    Find<IHeater>("hGR2"),
-        //    Find<IHeater>("hGR4"),
-        //    Find<IHeater>("hGR6"),
-        //    Find<IHeater>("hGR8"),
-        //    Find<IHeater>("hGR10"),
-        //    Find<IHeater>("hGR12")
-        //}.ToArray();
-        //PidStepTest(grs);
-        //return;
-
-        //CalibrateManualHeaters();
-        //return;
-
-        //var ips = new List<IInletPort>()
-        //{
-        //    Find<IInletPort>("IP2"),
-        //    Find<IInletPort>("IP4"),
-        //    Find<IInletPort>("IP6"),
-        //    Find<IInletPort>("IP8"),
-        //    Find<IInletPort>("IP10"),
-        //    Find<IInletPort>("IP12")
-        //};
-        //ips.ForEach(ip => ip.QuartzFurnace.TurnOn());
-        //WaitMinutes(10);
-        //PidStepTest(ips.Select(ip => ip.SampleFurnace).Cast<IHeater>().ToArray());
-        //ips.ForEach(ip => ip.QuartzFurnace.TurnOff());
-        //return;
-
-        //VttWarmStepTest();
-        //return;
-
-        //TestPressurize("H2.GM", 100);
-        //TestPressurize("H2.GM", 900);
-        //TestPressurize("He.MC", 80);
-        //TestPressurize("He.GM", 800);
-        //TestAdmit("He.GM", 800);
-        //TestAdmit("He.IM", 800);
-        //TestPressurize("CO2.MC", 75);
-        TestPressurize("CO2.MC", 850);
-        //TestAdmit("O2.IM", 1350);
-        return;
-
-        //TestValveRaceCondition();
-        //return;
     }
 
     #endregion Test functions
