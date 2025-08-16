@@ -123,7 +123,7 @@
           "$type": "AeonHacs.Components.ParameterStep, AeonHacs.Core",
           "Name": "IpRampRate",
           "Description": "The target rate-of-change when raising the Inlet Port sample furnace's temperature.",
-          "Value": 9.0
+          "Value": 6.0
         },
         {
           "Name": "Adjust sample ramp rate",
@@ -145,6 +145,10 @@
         },
         {
           "Name": "Evacuate and Freeze first trap",
+          "Description": ""
+        },
+        {
+          "Name": "Evacuate and Freeze VTT",
           "Description": ""
         },
         {
@@ -1750,24 +1754,32 @@
             "Name": "VoltageCorrection",
             "CalibrationData": [
               {
-                "Item1": 1.2919,
-                "Item2": 0.8543
+                "Item1": 0.9941,
+                "Item2": 1.0004
               },
               {
-                "Item1": 2.1859,
-                "Item2": 1.0294
+                "Item1": 1.686,
+                "Item2": 1.3181
               },
               {
-                "Item1": 3.3536,
-                "Item2": 2.0086
+                "Item1": 2.0249,
+                "Item2": 1.7135
               },
               {
-                "Item1": 4.5972,
-                "Item2": 3.0
+                "Item1": 2.1871,
+                "Item2": 1.997
               },
               {
-                "Item1": 4.9702,
-                "Item2": 5.0382
+                "Item1": 2.495,
+                "Item2": 2.6998
+              },
+              {
+                "Item1": 3.699,
+                "Item2": 3.699
+              },
+              {
+                "Item1": 4.2033,
+                "Item2": 4.0792
               },
               {
                 "Item1": 5.9773,
@@ -1842,12 +1854,24 @@
             "Name": "VoltageCorrection",
             "CalibrationData": [
               {
-                "Item1": 0.0,
-                "Item2": 0.0
+                "Item1": 4.4713,
+                "Item2": 5.5713
               },
               {
-                "Item1": 8.0091,
-                "Item2": 9.98
+                "Item1": 5.185,
+                "Item2": 6.4606
+              },
+              {
+                "Item1": 7.1313,
+                "Item2": 9.0472
+              },
+              {
+                "Item1": 7.653,
+                "Item2": 9.5283
+              },
+              {
+                "Item1": 8.0037,
+                "Item2": 9.944
               }
             ]
           },
@@ -5012,7 +5036,7 @@
         },
         {
           "Name": "Open fully",
-          "Value": 1150,
+          "Value": 1100,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -5035,13 +5059,13 @@
         },
         {
           "Name": "ColdTrickle",
-          "Value": 1205,
+          "Value": 1260,
           "Incremental": false,
           "Configuration": "t1.0"
         },
         {
           "Name": "WarmTrickle",
-          "Value": 1195,
+          "Value": 1260,
           "Incremental": false,
           "Configuration": "t1.0"
         },
@@ -5082,7 +5106,7 @@
         },
         {
           "Name": "Open fully",
-          "Value": 1000,
+          "Value": 1080,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -5285,7 +5309,7 @@
         },
         {
           "Name": "Open fully",
-          "Value": 1000,
+          "Value": 1070,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -5314,7 +5338,7 @@
         },
         {
           "Name": "Open fully",
-          "Value": 1000,
+          "Value": 950,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -5430,7 +5454,7 @@
         },
         {
           "Name": "Open fully",
-          "Value": 980,
+          "Value": 950,
           "Incremental": false,
           "Configuration": "t1.0"
         }
@@ -5531,7 +5555,7 @@
       "MinimumPosition": 0,
       "MaximumPosition": 675,
       "PositionsPerTurn": 96,
-      "ClosedOffset": 3,
+      "ClosedOffset": 1,
       "Calibrated": true,
       "ConsecutiveMatches": 9,
       "ValveState": "Opened",
@@ -5542,67 +5566,67 @@
           "Name": "Close",
           "Value": 672,
           "Incremental": false,
-          "Configuration": "i500 t15"
+          "Configuration": "i600 t15"
         },
         {
           "Name": "Open",
           "Value": 0,
           "Incremental": false,
-          "Configuration": "i550 t15"
+          "Configuration": "i600 t15"
         },
         {
           "Name": "Close a bit",
           "Value": 1,
           "Incremental": true,
-          "Configuration": "i500 t0.5"
+          "Configuration": "i600 t0.5"
         },
         {
           "Name": "Close quarter turn",
           "Value": 24,
           "Incremental": true,
-          "Configuration": "i500 t1"
+          "Configuration": "i600 t1"
         },
         {
           "Name": "Close half turn",
           "Value": 48,
           "Incremental": true,
-          "Configuration": "i500 t2"
+          "Configuration": "i600 t2"
         },
         {
           "Name": "Close one turn",
           "Value": 96,
           "Incremental": true,
-          "Configuration": "i500 t3"
+          "Configuration": "i600 t3"
         },
         {
           "Name": "Open a bit",
           "Value": -1,
           "Incremental": true,
-          "Configuration": "i550 t0.5"
+          "Configuration": "i600 t0.5"
         },
         {
           "Name": "Open a bit more",
           "Value": -3,
           "Incremental": true,
-          "Configuration": "i550 t0.5"
+          "Configuration": "i600 t0.5"
         },
         {
           "Name": "Open quarter turn",
           "Value": -24,
           "Incremental": true,
-          "Configuration": "i550 t1"
+          "Configuration": "i600 t1"
         },
         {
           "Name": "Open half turn",
           "Value": -48,
           "Incremental": true,
-          "Configuration": "i550 t2"
+          "Configuration": "i600 t2"
         },
         {
           "Name": "Open one turn",
           "Value": -96,
           "Incremental": true,
-          "Configuration": "i550 t3"
+          "Configuration": "i600 t3"
         },
         {
           "Name": "Open pulse (only if stuck closed!)",
@@ -5614,7 +5638,7 @@
           "Name": "Calibrate",
           "Value": 1,
           "Incremental": true,
-          "Configuration": "i500 t1.5"
+          "Configuration": "i600 t1.5"
         }
       ]
     },
@@ -7176,7 +7200,7 @@
       "ZerosToAverage": 30,
       "ManualMode": false,
       "PowerLevel": 0.0,
-      "MaximumPowerLevel": 3.0
+      "MaximumPowerLevel": 4.0
     }
   },
   "PidSetups": {
@@ -11314,7 +11338,7 @@
       "$type": "AeonHacs.Components.OvenRamper, AeonHacs.Core",
       "Name": "IpOvenRamper",
       "Description": "Inlet port sample furnace ramper",
-      "RateDegreesPerMinute": 9.0,
+      "RateDegreesPerMinute": 6.0,
       "IdleTimeout": 1000,
       "LogEverything": false
     },
@@ -11362,7 +11386,7 @@
     "DefaultParameters": [
       {
         "ParameterName": "CO2TransferMinutes",
-        "Value": 1.0,
+        "Value": 1.5,
         "Description": "Time to wait for CO2 transfer between chambers."
       },
       {
